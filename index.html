@@ -16,9 +16,6 @@
             color: #333;
             background-color: #f5f5f5;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
         }
         .container {
@@ -26,9 +23,8 @@
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
         }
         .logo {
             width: 80px;
@@ -47,39 +43,65 @@
             color: #333;
             margin-bottom: 10px;
             font-size: 24px;
+            text-align: center;
         }
         .subtitle {
             color: #666;
             margin-bottom: 30px;
+            text-align: center;
         }
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        .app-section {
+            margin-bottom: 25px;
         }
-        .link-group {
+        .app-header {
             background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 2px solid #f36421;
         }
-        .link-group h3 {
+        .app-header h2 {
+            font-size: 18px;
             color: #333;
-            margin-bottom: 10px;
-            font-size: 16px;
+            margin: 0;
+        }
+        .app-header .app-desc {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+        }
+        .app-links {
+            background: #fff;
+            border: 1px solid #eee;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 15px;
+        }
+        .link-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .link-row:not(:last-child) {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .link-row span {
+            color: #444;
+            font-size: 14px;
         }
         .link-buttons {
             display: flex;
-            gap: 10px;
-            justify-content: center;
+            gap: 8px;
         }
         a.btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 6px 14px;
             background: #f36421;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 5px;
             font-weight: 500;
+            font-size: 13px;
             transition: background 0.2s;
         }
         a.btn:hover {
@@ -88,7 +110,7 @@
         a.btn-outline {
             background: white;
             color: #f36421;
-            border: 2px solid #f36421;
+            border: 1px solid #f36421;
         }
         a.btn-outline:hover {
             background: #fff5f0;
@@ -99,6 +121,7 @@
             border-top: 1px solid #eee;
             color: #666;
             font-size: 14px;
+            text-align: center;
         }
         .footer a {
             color: #f36421;
@@ -110,22 +133,62 @@
     <div class="container">
         <div class="logo">S</div>
         <h1>Sofre Legal Documents</h1>
-        <p class="subtitle">Privacy Policy and Terms & Conditions</p>
+        <p class="subtitle">Privacy Policies and Terms & Conditions</p>
 
-        <div class="links">
-            <div class="link-group">
-                <h3>Privacy Policy / پالیسی محرمیت</h3>
-                <div class="link-buttons">
-                    <a href="privacy-policy.html" class="btn">English</a>
-                    <a href="privacy-policy-fa.html" class="btn btn-outline">دری</a>
+        <!-- Customer App -->
+        <div class="app-section">
+            <div class="app-header">
+                <h2>Sofre (Customer App)</h2>
+                <div class="app-desc">For customers ordering food</div>
+            </div>
+            <div class="app-links">
+                <div class="link-row">
+                    <span>Privacy Policy</span>
+                    <div class="link-buttons">
+                        <a href="privacy-policy.html" class="btn">English</a>
+                        <a href="privacy-policy-fa.html" class="btn btn-outline">دری</a>
+                    </div>
+                </div>
+                <div class="link-row">
+                    <span>Terms & Conditions</span>
+                    <div class="link-buttons">
+                        <a href="terms.html" class="btn">English</a>
+                        <a href="terms-fa.html" class="btn btn-outline">دری</a>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="link-group">
-                <h3>Terms & Conditions / شرایط و ضوابط</h3>
-                <div class="link-buttons">
-                    <a href="terms.html" class="btn">English</a>
-                    <a href="terms-fa.html" class="btn btn-outline">دری</a>
+        <!-- Restaurant App -->
+        <div class="app-section">
+            <div class="app-header">
+                <h2>Sofre Business (Restaurant App)</h2>
+                <div class="app-desc">For restaurant partners</div>
+            </div>
+            <div class="app-links">
+                <div class="link-row">
+                    <span>Privacy Policy</span>
+                    <div class="link-buttons">
+                        <a href="privacy-policy-restaurant.html" class="btn">English</a>
+                        <a href="privacy-policy-restaurant-fa.html" class="btn btn-outline">دری</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courier App -->
+        <div class="app-section">
+            <div class="app-header">
+                <h2>Sofre for Drivers (Courier App)</h2>
+                <div class="app-desc">For delivery partners</div>
+            </div>
+            <div class="app-links">
+                <div class="link-row">
+                    <span>Privacy Policy</span>
+                    <div class="link-buttons">
+                        <a href="privacy-policy-courier.html" class="btn">English</a>
+                        <a href="privacy-policy-courier-fa.html" class="btn btn-outline">دری</a>
+                    </div>
                 </div>
             </div>
         </div>
